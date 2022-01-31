@@ -20,7 +20,7 @@ function add_fireworks() {
 add_action( 'wp_enqueue_scripts', 'add_fireworks', 20 );
 
 /* Participant Application Form Options */
-require get_template_directory() . '/includes/form_helpers.php';
+require get_stylesheet_directory() . '/includes/form_helpers.php';
 
 if ( class_exists("GFForms") ){
   new GW_Minimum_Characters( array( 
