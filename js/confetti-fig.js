@@ -1,4 +1,4 @@
-var end = Date.now() + (15 * 1000);
+var end = Date.now() + (8 * 1000);
 var colors = ['#d5202f', '#47c0ef', '#154b9d', '#ffffff'];
 var canvas = document.getElementById('confetti-canvas');
 canvas.confetti = canvas.confetti || confetti.create(canvas, { resize: true });
