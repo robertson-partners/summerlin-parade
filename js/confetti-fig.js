@@ -5,14 +5,14 @@ canvas.confetti = canvas.confetti || confetti.create(canvas, { resize: true });
 
 (function frame() {
   confetti({
-    particleCount: 2,
+    particleCount: 5,
     angle: 60,
     spread: 55,
     origin: { x: 0 },
     colors: colors
   });
   confetti({
-    particleCount: 2,
+    particleCount: 5,
     angle: 120,
     spread: 55,
     origin: { x: 1 },
