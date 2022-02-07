@@ -42,3 +42,13 @@ if ( function_exists('gp_better_user_activation') ){
     remove_action( 'admin_head', array( gp_better_user_activation(), 'remove_default_content_editor' ) );
   });
 }
+
+/**
+ * Logout Shortcode
+ */
+add_shortcode('logout',function(){
+  if ( is_user_logged_in() ) {
+    $url = wp_logout_url( home_url() );
+    return "<a href='$url'>Logout</a>";
+  }
+});
