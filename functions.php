@@ -111,7 +111,7 @@ function app_status_shortcode($atts = [], $content = null, $tag = '') {
       }
 
     } else {
-      return 'app status: ' . $app_status . ' | logged in state: ' . $logged_in;
+      return false;
     }
 
   } else {
