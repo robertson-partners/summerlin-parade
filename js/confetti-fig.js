@@ -23,3 +23,13 @@ canvas.confetti = canvas.confetti || confetti.create(canvas, { resize: true });
     requestAnimationFrame(frame);
   }
 }());
+
+/* VANTA CLOUDS */
+VANTA.CLOUDS({
+  el: "#paradehome_intro",
+  mouseControls: false,
+  touchControls: false,
+  gyroControls: true,
+  minHeight: 200.00,
+  minWidth: 200.00
+});
