@@ -52,3 +52,14 @@ add_shortcode('logout',function(){
     return "<a href='$url'>Logout</a>";
   }
 });
+
+/**
+ * User Application Status Shortcode
+ */
+add_shortcode('appstatus', function() {
+  if ( is_user_logged_in() ) {
+    $uid = get_current_user_id();
+    $all_meta_for_user = get_user_meta( $uid );
+    return print_r( $all_meta_for_user );
+  }
+});
