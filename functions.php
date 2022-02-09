@@ -80,35 +80,35 @@ function app_status_shortcode($atts = [], $content = null, $tag = '') {
     $usr_meta = get_user_meta( $uid );
     $app_status = $usr_meta['completed_application'][0];
     $logged_in = true;
-  }
 
-  /* Atts Conditional */
-  $status = ( $status_atts['completed'] == false ) ? 'incomplete' : 'completed';
+    /* Atts Conditional */
+    $status = ( $status_atts['completed'] == false ) ? 'incomplete' : 'completed';
 
-  /* Content! */
-  if ( !is_null($content) ) {
-    //$output .= apply_filters( 'the_content', $content );
-    $output .= do_shortcode( $content );
-  }
+    /* Content! */
+    if ( !is_null($content) ) {
+      //$output .= apply_filters( 'the_content', $content );
+      $output .= do_shortcode( $content );
+    }
 
-  /* Output + Return */
-  if ( isset($app_status) && $logged_in) {
+    /* Output + Return */
+    if ( isset($app_status) && $logged_in) {
 
-    if ( ($status === 'incomplete') && ($app_status == '0') ) {
-      
-      // DEFAULT or "false"
-      return $output;
+      if ( ($status === 'incomplete') && ($app_status == '0') ) {
+        
+        // DEFAULT or "false"
+        return $output;
 
-    } else if ( ($status === 'completed') && ($app_status != '0') ) {
-      
-      // "true"
-      return $output;
+      } else if ( ($status === 'completed') && ($app_status != '0') ) {
+        
+        // "true"
+        return $output;
 
-    } else {
-      
-      // All other conditions
-      return false;
+      } else {
+        
+        // All other conditions
+        return false;
 
+      }
     }
 
   } else {
