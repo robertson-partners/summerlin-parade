@@ -59,7 +59,7 @@ add_shortcode('logout',function(){
 add_shortcode('appstatus', function() {
   if ( is_user_logged_in() ) {
     $uid = get_current_user_id();
-    $all_meta_for_user = get_user_meta( $uid );
-    return print_r( $all_meta_for_user );
+    $usr_meta = get_user_meta( $uid );
+    return $usr_meta['completed_application'][0];
   }
 });
