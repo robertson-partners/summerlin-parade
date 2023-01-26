@@ -24,7 +24,7 @@ canvas.confetti = canvas.confetti || confetti.create(canvas, { resize: true });
   }
 }());
 
-/* VANTA CLOUDS */
+/* VANTA CLOUDS
 VANTA.CLOUDS({
   el: "#paradehome_intro",
   mouseControls: false,
@@ -33,3 +33,4 @@ VANTA.CLOUDS({
   minHeight: 200.00,
   minWidth: 200.00
 });
+ */
